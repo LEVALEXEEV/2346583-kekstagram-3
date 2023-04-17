@@ -1,4 +1,4 @@
-import {escKeydownHandler, anotherAreaClickHandler, getRandomInt} from './util.js';
+import {escKeydownHandler, anotherAreaClickHandler} from './util.js';
 
 let onBigPictureEscKeydown;
 let onAnotherAreaClick;

@@ -1,8 +1,7 @@
-import { displayData } from "./displayData.js";
+import { displayData } from "./display-data.js";
 import { loadPictures } from "./api.js";
 import { submitForm } from "./validation.js";
-import { closeImageUploadModal } from "./uploadPicture.js";
-import './uploadPicture.js';
+import './upload-picture.js';
 
 
 loadPictures(

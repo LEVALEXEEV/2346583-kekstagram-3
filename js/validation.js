@@ -59,7 +59,7 @@ function unblockSubmitButton() {
 
 import { sendData } from "./api.js";
 import { convertDataToInformation, showErrorMessage, showSuccessMessage } from "./util.js";
-import { addPicture } from "./displayData.js"
+import { addPicture } from "./display-data.js"
 
 export function submitForm(onSuccess) {
   form.addEventListener('submit', (evt) => {

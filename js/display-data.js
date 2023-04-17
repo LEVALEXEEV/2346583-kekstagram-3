@@ -1,4 +1,4 @@
-import { onPictureClick } from "./showBigPicture.js";
+import { onPictureClick } from "./show-big-picture.js";
 
 const createPictureFromData = ({url, description, comments, likes}, pictureTemplate) => {
   const pictureElement = pictureTemplate.cloneNode(true);
