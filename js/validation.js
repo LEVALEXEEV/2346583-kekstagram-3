@@ -72,7 +72,6 @@ export function submitForm(onSuccess) {
       sendData(
         () => {
           addPicture(convertDataToInformation(sentInformation));
-          console.log("nenavizhu negrov")
           showSuccessMessage();
           unblockSubmitButton();
           onSuccess();
