@@ -5,6 +5,7 @@ import { closeImageUploadModal } from "./upload-picture.js";
 import './upload-picture.js';
 
 
+
 loadPictures(
   (photos) => {
     displayData(photos);

@@ -1,5 +1,6 @@
 import {pristine} from "./validation.js";
 import {onEffectButtonClick, setEffect, setPictureScale, onControlSmallerButtonClick, onControlBiggerButtonClick} from './edit-picture.js';
+import { createSlider, destroySlider } from "./edit-picture.js";
 
 const pictureUploadForm = document.querySelector('#upload-select-image');
 const preview = document.querySelector('.img-upload__preview').querySelector('img');
@@ -13,8 +14,10 @@ const scaleBiggerButton = document.querySelector('.scale__control--bigger');
 export function closeImageUploadModal() {
   pictureUploadOverlay.classList.add('hidden');
   document.body.classList.remove('modal-open');
+  destroySlider();
   setEffect('none');
   setPictureScale(100);
+  effects.removeEventListener('change', onEffectButtonClick);
   pristine.reset();
   pictureUploadForm.reset();
 }
@@ -31,7 +34,7 @@ pictureInput.addEventListener('change', function(evt) {
     preview.src = fileReader.result;
   };
   fileReader.readAsDataURL(uploadedImage);
-
+  createSlider();
   effects.addEventListener('change', onEffectButtonClick);
   scaleSmallerButton.addEventListener('click', onControlSmallerButtonClick);
   scaleBiggerButton.addEventListener('click', onControlBiggerButtonClick);
